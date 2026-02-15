@@ -67,7 +67,7 @@ std::vector<std::vector<long double>> nowaMacierz(int stopien)
     return macierz;
 }
 
-/* ====== Zwalnia pamięć zajętą przez macierz ====== */
+// Zwalnia pamięć zajętą przez macierz
 void usunMacierz(std::vector<std::vector<long double>>& macierz)
 {
     macierz.clear();
@@ -125,4 +125,5 @@ void wyswietlMacierz(const std::vector<std::vector<long double>>& macierz)
         std::cout << std::endl;
     }
 }
+
 
