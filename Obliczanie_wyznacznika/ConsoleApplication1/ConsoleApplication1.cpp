@@ -59,7 +59,7 @@ int main()
     return 0;
 }
 
-/* =====  Tworzy nową macierz kwadratową danego stopnia ===== */
+// Tworzy nową macierz kwadratową danego stopnia
 std::vector<std::vector<long double>> nowaMacierz(int stopien)
 {
     if (stopien < 1 || stopien > MAX_STOPIEN) anuluj(EINVAL);
@@ -73,7 +73,7 @@ void usunMacierz(std::vector<std::vector<long double>>& macierz)
     macierz.clear();
 }
 
-/* ===== Oblicza wartość wyznacznika metodą rozwinięcia Laplace'a ===== */
+// Oblicza wartość wyznacznika metodą rozwinięcia Laplace'a
 long double metodaLaplace(const std::vector<std::vector<long double>>& macierz, int stopien)
 {
     if (stopien == 1)
@@ -103,7 +103,7 @@ long double metodaLaplace(const std::vector<std::vector<long double>>& macierz, 
     return det;
 }
 
-/* ===== Wyświetla treść błędu i wychodzi z aplikacji ===== */
+// Wyświetla treść błędu i wychodzi z aplikacji 
 void anuluj(const int nr_bledu)
 {
     char buffer[256];
@@ -112,7 +112,7 @@ void anuluj(const int nr_bledu)
     exit(nr_bledu);
 }
 
-/* ===== Wyświetla macierz ===== */
+// Wyświetla macierz
 void wyswietlMacierz(const std::vector<std::vector<long double>>& macierz)
 {
     int stopien = macierz.size();
@@ -125,3 +125,4 @@ void wyswietlMacierz(const std::vector<std::vector<long double>>& macierz)
         std::cout << std::endl;
     }
 }
+
